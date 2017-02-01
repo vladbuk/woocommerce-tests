@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: NovaPoshta Shipping Method
- * Plugin URI: http://vladbuk.com/woocommerce/plugins/shipping-novaposhta
+ * Plugin URI: http://vb.biz.ua/woocommerce/plugins/shipping-novaposhta
  * Description: Плагин добавляет в магазин метод доставки "Новая почта".
  * Version: 1.0.1
  * Author: Vladbuk
@@ -55,7 +55,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 					// Load the settings API
 					$this->init_form_fields(); // This is part of the settings API. Override the method to add your own settings
 					$this->init_settings(); // This is part of the settings API. Loads settings you previously init.
-					
+
 							// Define user set variables
 					$this->title        = $this->get_option( 'title' );
 					$this->availability = $this->get_option( 'availability' );
@@ -68,7 +68,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 					// Save settings in admin if you have any defined
 					add_action( 'woocommerce_update_options_shipping_' . $this->id, array( $this, 'process_admin_options' ) );
 				}
-				
+
 				/**
 				* Initialize Settings Form Fields.
 				*/
@@ -103,7 +103,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			'all' 		=> __( 'All allowed countries', 'woocommerce' ),
 			'specific' 	=> __( 'Specific Countries', 'woocommerce' ),
 		),
-	),	
+	),
 	'countries' => array(
 		'title' 		=> __( 'Specific Countries', 'woocommerce' ),
 		'type' 			=> 'multiselect',
@@ -123,7 +123,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 		'description'	=> "Укажите стоимость доставки",
 		'default'		=> '',
 		'desc_tip'		=> true
-	)	
+	)
      );
 } // End init_form_fields()
 
